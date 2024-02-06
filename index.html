@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotfinder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #navbar {
+
+            width: 100%;
+            height: 12vh;
+            border: 1px solid rgb(187, 180, 180);
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 30px;
+
+
+
+
+
+        }
+
+        #logo {
+            display: inline-block;
+        }
+
+        #logoimg {
+            width: 90%;
+            height: 60px;
+            margin-top: 14px;
+        }
+
+        
+
+        #pagelinks {
+            display: inline-block;
+
+        }
+
+        li {
+            float: left;
+            position: relative;
+            list-style: none;
+            padding: 15px;
+        }
+
+        a {
+            color: rgb(129, 128, 128);
+            text-decoration: none;
+            text-transform: capitalize;
+            font-size: larger;
+
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        #rightsidenavbar {
+            display: inline-block;
+            margin-top: 29px;
+            margin-left: 100px;
+        }
+
+        #firstbutton {
+            width: 120px;
+            height: 30px;
+            border-radius: 30px;
+            color: white;
+            background-color: rgba(214, 18, 18, 0.897);
+            border: 0;
+            font-size: 20px;
+        }
+
+        #fbut {
+            margin-top: 25px;
+            margin-right: 80px;
+        }
+
+        #register {
+            color: white;
+            font-size: 20px;
+        }
+
+        #container2 {
+            position: absolute;
+            top: 140px;
+            width: 90%;
+            height: 85vh;
+            background-color: rgb(231, 250, 250);
+            margin-left: 60px;
+            border-radius: 15px;
+        }
+
+        #img1 {
+            float: right;
+            margin-right: 60px;
+            margin-top: 100px;
+        }
+
+        #con3 {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+
+        }
+
+        #firstpara {
+            color: rgb(129, 128, 128);
+            text-transform: capitalize;
+            font-size: 18px;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+        }
+
+        #input1 {
+            width: 500px;
+            height: 50px;
+            border-color: rgba(250, 3, 3, 0.897);
+            outline-color: rgba(250, 3, 3, 0.897);
+            background-color: #ffffff;
+            font-size: 15px;
+            margin-left: 15px;
+            text-align: center;
+
+        }
+
+
+
+        #input1::placeholder {
+            color: black;
+            font-size: larger;
+            letter-spacing: 1px;
+            text-indent: -50px;
+        }
+
+
+
+
+        #img2 {
+            height: 40px;
+            width: 30px;
+            position: absolute;
+            top: 8px;
+            bottom: 12px;
+            left: 20px;
+            /* border: 2.5px solid rgba(250, 3, 3, 0.897); */
+            border-right: 0;
+
+
+
+
+        }
+
+        #ico {
+            position: relative;
+        }
+
+
+
+        #secur {
+
+            background-color: white;
+
+        }
+
+        #vehicle {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        select {
+            width: 508px;
+            height: 50px;
+            border-color: rgba(250, 3, 3, 0.897);
+            outline-color: rgba(250, 3, 3, 0.897);
+            background-color: #ffffff;
+            font-size: 15px;
+            margin-left: 15px;
+
+
+        }
+
+        #img3 {
+            height: 40px;
+            width: 30px;
+            position: absolute;
+            top: 8px;
+            bottom: 12px;
+            left: 20px;
+            /* border: 2.5px solid rgba(250, 3, 3, 0.897); */
+            border-right: 0;
+
+
+        }
+
+        option {
+            color: black;
+            font-size: larger;
+            letter-spacing: 1px;
+            text-align: center;
+
+        }
+
+        #input2 {
+            width: 225px;
+            height: 50px;
+            border-color: rgba(250, 3, 3, 0.897);
+            outline-color: rgba(250, 3, 3, 0.897);
+            background-color: #ffffff;
+            font-size: 15px;
+            margin-left: 15px;
+            text-align: center;
+
+
+        }
+
+        #img4 {
+            height: 40px;
+            width: 30px;
+            position: absolute;
+            top: 8px;
+            bottom: 12px;
+            left: 20px;
+            
+            border-right: 0;
+
+
+        }
+
+        #input3 {
+            width: 225px;
+            height: 50px;
+            border-color: rgba(250, 3, 3, 0.897);
+            outline-color: rgba(250, 3, 3, 0.897);
+            background-color: #ffffff;
+            font-size: 15px;
+            margin-left: 15px;
+            text-align: center;
+
+
+        }
+
+        #img5 {
+            height: 40px;
+            width: 30px;
+            position: absolute;
+            top: 8px;
+            bottom: 12px;
+            left: 20px;
+            /* border: 2.5px solid rgba(250, 3, 3, 0.897); */
+            border-right: 0;
+
+
+        }
+
+        #box1 {
+            width: 250px;
+            position: relative;
+
+            margin-top: 20px;
+            float: left;
+
+
+        }
+
+        #box2 {
+
+            position: absolute;
+            left: 275px;
+            margin-top: 20px;
+        }
+
+        #box3 {
+            position: absolute;
+            margin-top: 85px;
+        }
+
+
+
+
+
+
+
+        #button2 {
+
+
+
+            background-color: rgba(250, 3, 3, 0.897);
+            color: white;
+            border-radius: 30px;
+            height: 60px;
+            width: 280px;
+            border-color: rgba(250, 3, 3, 0.897);
+            font-size: 18px;
+            margin-top: 40px;
+            margin-left: 15px;
+
+
+        }
+
+        #container3 {
+            width: 90%;
+            position: absolute;
+            left: 20px;
+
+
+        }
+
+        #container4 {
+            width: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 19px;
+        }
+
+        #img6 {
+            width: 375px;
+            height: 225px;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+        }
+
+        #box4 {
+            width: 375px;
+            height: 380px;
+            border: 1px solid rgb(207, 207, 207);
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            margin-right: 40px;
+
+
+        }
+
+        #button3 {
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: rgba(250, 3, 3, 0.897);
+            color: white;
+            margin-left: 100px;
+            letter-spacing: 2px;
+            border-color: rgba(250, 3, 3, 0.897);
+        }
+
+        #img7 {
+            width: 375px;
+            height: 225px;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+        }
+
+        #box5 {
+            width: 375px;
+            height: 380px;
+            border: 1px solid rgb(207, 207, 207);
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            margin-right: 40px;
+
+        }
+
+        #img8 {
+            width: 375px;
+            height: 225px;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+        }
+
+        #box6 {
+            width: 375px;
+            height: 380px;
+            border: 1px solid rgb(207, 207, 207);
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            margin-right: 40px;
+
+        }
+
+        #container5 {
+
+            width: 90%;
+            height: 86vh;
+            background-color: rgb(252, 75, 75);
+            border-radius: 2%;
+        }
+
+        #container6 {
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #box8 {
+
+            width: 350px;
+            height: 300px;
+            background-color: white;
+            border-radius: 4%;
+
+        }
+
+        #img15 {
+            height: 100px;
+            width: 150px;
+            margin-left: 100px;
+            margin-top: 40px;
+        }
+
+        #box9 {
+
+            width: 350px;
+            height: 300px;
+            background-color: white;
+            border-radius: 4%;
+
+        }
+
+        #img16 {
+            height: 60px;
+            width: 90px;
+            margin-left: 130px;
+            margin-top: 40px;
+        }
+
+        #box10 {
+
+            width: 350px;
+            height: 300px;
+            background-color: white;
+            border-radius: 4%;
+
+        }
+
+        #img17 {
+            height: 60px;
+            width: 90px;
+            margin-left: 130px;
+            margin-top: 40px;
+        }
+        #container7 {
+            width: 90%;
+            height: 90vh;
+            
+            
+            
+        }
+        #img19 {
+             width: 250px;
+             height: 150px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+        }
+        #box11 {
+            width: 250px;
+             height: 325px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+             border: 1px solid rgb(202, 202, 202);
+        }
+        #button4{
+            border-radius: 25px;
+            background-color: rgba(250, 3, 3, 0.897);
+            color: white;
+            border-color: rgba(250, 3, 3, 0.897);
+            width: 150px;
+            height: 50px;
+            letter-spacing: 2px;
+            margin-left: 50px;
+        }
+        #img20 {
+             width: 250px;
+             height: 150px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+        }
+        #box12 {
+            width: 250px;
+             height: 325px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+             border: 1px solid rgb(202, 202, 202);
+        }
+        #img21 {
+             width: 250px;
+             height: 150px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+        }
+        #box13 {
+            width: 250px;
+             height: 325px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+             border: 1px solid rgb(202, 202, 202);
+        }
+        #img22 {
+             width: 250px;
+             height: 150px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+        }
+        #box14 {
+            width: 250px;
+             height: 325px;
+             border-top-left-radius: 5%;
+             border-top-right-radius: 5%;
+             border: 1px solid rgb(202, 202, 202);
+        }
+        #subcon7 {
+            display: flex;
+            justify-content: space-between;
+        }
+        #box15 {
+           width: 600px;
+           height: 300px;
+           border: 1px solid rgb(202, 202, 202);
+           border-radius: 2%;
+           
+           
+        }
+        #img23 {
+            margin-left: 30px;
+            margin-top: 10px;
+           width: 70px;
+           height: 80px;
+           margin-bottom: 80px;
+           
+           
+           
+           
+           
+        }
+        #img24 {
+           position: absolute;
+           margin-top: 50px;
+           width: 130px;
+           height: 40px;
+        }
+        #box16 {
+            display: inline-block;
+            
+        }
+       #container8 {
+        width: 90%;
+        height: 90vh;
+        
+       } 
+       #box18 {
+        width: 400px;
+            height: 400px;
+            border: 1px solid rgb(207, 207, 207);
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            margin-right: 40px;
+
+
+       }
+       #img25 {
+        width: 400px;
+            height: 225px;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+
+       }
+       #box19 {
+        width: 400px;
+            height: 400px;
+            border: 1px solid rgb(207, 207, 207);
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            margin-right: 40px;
+
+
+       }
+       #img26 {
+        width: 400px;
+            height: 225px;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+
+       }
+       #box20 {
+        width: 400px;
+            height: 400px;
+            border: 1px solid rgb(207, 207, 207);
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            margin-right: 40px;
+
+
+       }
+       #img27 {
+        width: 400px;
+            height: 225px;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+
+       }
+       #subcon8 {
+        display: flex;
+        justify-content: space-around;
+       }
+       #container9 {
+        
+          width: 90%;
+          height: 500px;
+          border-radius: 18px;
+          background-image: url(img/img32.jpg);
+          
+       }
+       #button5 {
+
+
+
+            background-color: rgba(250, 3, 3, 0.897);
+            color: white;
+            border-radius: 30px;
+            height: 60px;
+            width: 200px;
+            border-color: rgba(250, 3, 3, 0.897);
+            font-size: 18px;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 450px;
+            
+
+        }
+        #container10{
+            width: 90%;
+            height: 35vh;
+            background-color: rgb(231, 250, 250);
+        }
+        #input4 {
+          width: 210px;
+          height: 40px;
+          border-color: rgb(194, 193, 193);
+          color: red;
+          margin-left: 513px;
+          border-top-left-radius: 3%;
+          border-bottom-left-radius: 3%;
+        }
+        #button6 {
+            background-color: rgba(250, 3, 3, 0.897);
+            font-size: 15px;
+            width: 90px;
+            height: 45px;
+            position: absolute;
+            border-top-right-radius: 10% ;
+            border-bottom-right-radius: 10%;
+            color: white;
+            border-left: 0;
+            
+        }
+        #input4::placeholder {
+            font-size: 15px;
+            color: rgb(184, 183, 183);
+
+        }
+        #container11 {
+            width: 100%;
+            height: 40vh;
+            border-top: 3px solid red;
+            
+            position: absolute;
+            right: 70px;
+            
+        }
+        #img33 {
+            width: 100px;
+            height: 50px;
+            
+        }
+        #subcon11 {
+            display: flex;
+            justify-content: space-around;
+        }
+        #container12 {
+            width: 90%;
+            height: 50px;
+            
+            border-top: 1px solid rgb(161, 161, 161);
+            position: absolute;
+            left: 65px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+    <div id="navbar">
+        <div id="logo">
+
+            <img id="logoimg" src="img/logo.png" alt="SpotFinder">
+        </div>
+        <div id="pagelinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Become a Partner</a></li>
+            </ul>
+        </div>
+        <div id="rightsidenavbar">
+            <i id="secur" class="fa-solid fa-lock fa-2xl" style="color: rgba(214, 18, 18, 0.897);"></i>
+        </div>
+        <div id="login">
+            <ul>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <div id="fbut">
+            <button id="firstbutton">
+                <a id="register" href="#" Register>Register</a>
+            </button>
+        </div>
+    </div>
+    <div id="container2">
+        <img id="img1" src="img/img.1.png" alt="img">
+        <div id="con3">
+            <h1 style="font-size: 50px; letter-spacing: 3px; color: rgb(94, 93, 93);">Parking
+                <span style="color: rgba(214, 18, 18, 0.897); 
+            font-size: 50px;
+            letter-spacing: 3px;">
+                    Simplified </span>
+            </h1>
+            <p id="firstpara">
+                easily find a parking space now!
+            </p>
+            <div id="ico">
+
+                <img id="img2" src="img/img3 (1).jpg" alt="img">
+                <input id="input1" type="text" placeholder="Your Location">
+            </div>
+            <div id="vehicle">
+
+                <img id="img3" src="img/img5.png" alt="img">
+                <select>
+                    <option selected>Select Vehicle Category</option>
+                    <option>Car</option>
+                    <option>Event</option>
+                    <option>Valet</option>
+                    <option>Semi Truck</option>
+                </select>
+            </div>
+            <div id="box1">
+
+                <img id="img4" src="img/img11 (1).png" alt="img">
+                <input id="input2" type="datetime" placeholder="Check-In" style="color: rgb(253, 86, 86);">
+            </div>
+            <div id="box2">
+                <img id="img5" src="img/IMG9.png" alt="img">
+                <input id="input3" type="datetime" placeholder="Check-Out" style="color: rgb(253, 86, 86);">
+            </div>
+            <div id="box3">
+                <button id="button2">
+                    Search Parking Spaces
+                </button>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="container3">
+                <h1 style="color: rgb(46, 45, 45); font-size: 44px; text-align: center;">
+                    We are everywhere!
+                </h1>
+                <h3 style="color: rgb(129, 128, 128); text-align: center; ">Find a new home for your car</h3>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <div id="container4">
+                <div id="box4">
+                    <img id="img6" src="img/img12.jpg" alt="img">
+                    <h1 style="text-align: center; color: rgb(73, 73, 73);">
+                        City Parking</h1>
+                    <button id="button3">
+                        Find a Parking</button>
+
+                </div>
+                <div id="box5">
+                    <img id="img7" src="img/img13.jpg" alt="img">
+                    <h1 style="text-align: center; color: rgb(73, 73, 73);">
+                        Semi Truck Par...</h1>
+                    <button id="button3">
+                        Find a Parking</button>
+
+
+                </div>
+                <div id="box6">
+                    <img id="img8" src="img/img14.jpg" alt="img">
+                    <h1 style="text-align: center; color: rgb(73, 73, 73);">
+                        Airport Parking</h1>
+                    <button id="button3">
+                        Find a Parking</button>
+                </div>
+            </div>
+            <br><br><br>
+            <div id="container5">
+                <div id="box7">
+                    <br>
+                    <h1 style="color: white; font-size: 45px; text-align: center;
+                    margin-top: 30px;">Why Spot Finder?</h1>
+                    <p style="color: white; text-align: center; line-height: 25px; font-size: 22px;">We understand the
+                        pain for finding the right spot where your car feels home.<br> Handicap friendly spots, diligent
+                        customer support, we aim to comfort you with<br> nearest parking spot!</p>
+
+                </div>
+                <div id="container6">
+                    <div id="box8">
+                        <img id="img15" src="img/img15.png" alt="img">
+
+                        <h4 style="text-align: center;">It's fast</h4>
+                        <p
+                            style="text-align: center; line-height: 18px; font-family: 'Courier New', Courier, monospace; letter-spacing: 1px;">
+                            Our new app makes finding spots in not more than 3 steps. We're building the largest network
+                            of parking spots!
+                        </p>
+
+                    </div>
+                    <div id="box9">
+                        <img id="img16" src="img/img17.png" alt="img">
+
+                        <h4 style="text-align: center;">It's easy</h4>
+                        <p
+                            style="text-align: center; line-height: 18px; font-family: 'Courier New', Courier, monospace; letter-spacing: 1px;">
+                            We aim to keep you hooked to our services with an experience excellence team!
+
+                        </p>
+
+                    </div>
+                    <div id="box10">
+                        <img id="img17" src="img/img18.png" alt="img">
+
+                        <h4 style="text-align: center;">It's affordable</h4>
+                        <p
+                            style="text-align: center; line-height: 18px; font-family: 'Courier New', Courier, monospace; letter-spacing: 1px;">
+                            Find affordable spots and spend your days stress-free while your car is parked with us.
+
+
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="container7">
+                <h1 style="font-size: 40px; margin-left: 450px; color: rgb(43, 43, 43);">Airport Parking</h1>
+                <div id="subcon7">
+               <div id="box11">
+                <img id="img19"  src="img/img19.jpg" alt="img">
+                <h2 style="color: rgb(43, 43, 43); margin-left: 15px;">Days Inn by Wynd...</h2>
+                <p style="color: rgb(141, 140, 140); margin-left: 15px;">Days Inn by Wyndham hotel</p>
+                <button id="button4">Book Now</button>
+               </div>
+               <div id="box12">
+                <img id="img20"  src="img/img20.jpg" alt="">
+                <h2 style="color: rgb(43, 43, 43); margin-left: 15px;">Days Inn by Wynd...</h2>
+                <p style="color: rgb(29, 29, 29);margin-left: 115px;">Da</p>
+                <button id="button4">Book Now</button>
+               </div>
+
+               <div id="box13">
+               <img id="img21"  src="img/img21.png" alt="">
+               <h2 style="color: rgb(43, 43, 43); margin-left: 15px;">Home2 Suites by H...</h2>
+                <p style="color: rgb(29, 29, 29);margin-left: 115px;">Th</p>
+                <button id="button4">Book Now</button>
+               </div>
+
+               <div id="box14">
+                <img id="img22"  src="img/img22.jpg" alt="">
+                <h2 style="color: rgb(43, 43, 43); margin-left: 15px;">Holiday Inn Expres...</h2>
+                <p style="color: rgb(141, 140, 140); margin-left: 15px;">Holiday Inn Express & Suites</p>
+                <button id="button4">Book Now</button>
+               </div>
+            </div> 
+
+            </div>
+            
+            <div id="box15">
+                <p style="font-size: 20px; position: absolute; left: 10px; margin-left: 100px;">Anonymous</p>
+                <img id="img23" src="img/img23.jpg"  alt="">
+                    
+               
+                <img id="img24"  src="img/img24.jpg" alt="">
+                <div id="box16">
+                      
+                </div>
+                <div id="box17">
+                    <p style="color: rgb(141, 140, 140); margin-left: 50px; line-height: 20px;">We loved using Spotfinder.It was easy and simple for us.I am 80 years <br>
+                    old and we liked how easy it was to do a booking.</p>
+                    <p style="color: red; margin-left: 50px;">Read More <sup>>></sup></p>
+                </div>
+
+                
+                 
+            </div>
+            <div id="container8">
+                <h1 style="font-size: 40px; color: rgb(43, 43, 43); text-align: center;">
+                    Interesting Reads!</h1>
+                    <h2 style="color: rgb(43, 43, 43); margin-left: 15px;">New articles</h2>
+                    <div id="subcon8">
+                    <div id="box18">
+                       <img id="img25"   src="img/img25.jpg" alt="img">
+                       <h2 style="color: rgb(43, 43, 43) ;margin-left: 15px;">Why book your car parki...</h2>
+                       <p style="color: rgb(184, 183, 183); margin-left: 15px;">Online car parking can be a game-changer for anyone<br>
+                    planning a trip, whether it's for b</p>
+                        <p style="color: red; margin-left: 15px;">Read More <sup>>></sup></p>
+                    </div>
+                    <div id="box19">
+                        <img id="img26"   src="img/img26.jpeg" alt="img">
+                        <br>
+                       <h2 style="color: rgb(43, 43, 43) ;margin-left: 15px;">How Parking Apps Outshi...</h2>
+                       
+                        <p style="color: red; margin-left: 15px;">Read More <sup>>></sup></p>
+                    </div>
+                    <div id="box20">
+                        <img id="img27"   src="img/img27.PNG" alt="img">
+                        <br>
+                       <h2 style="color: rgb(43, 43, 43) ;margin-left: 15px;">How Parking Apps Outshi...</h2>
+                       
+                        <p style="color: red; margin-left: 15px;">Read More <sup>>></sup></p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div id="container9">
+                <h1 style="color: white; font-size: 50px; text-align: center;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                letter-spacing: 6px; position: absolute; left: 230px; margin-top: 120px;">Partner With Spot Finder</h1>
+                 <p style="color: white; font-size: 22px; position: absolute; margin-top: 220px;
+                 margin-left: 340px;">Grow your business by listing your service with us.</p>
+                 <button id="button5">
+                    Become a Partner
+                 </button>
+                
+            </div>
+            <br><br>
+            <div id="container10">
+                <br>
+                <h1 style="text-align: center;">SUBSCRIBE</h1>
+                <p style="color: rgb(184, 183, 183); text-align: center; margin-left: 130px;">Subcribe to our Spot finder & stay Updated </p>
+                <input id="input4"  type="email" placeholder="Enter Your Email">
+                <button id="button6">Subscribe</button>
+            </div>
+            <div id="container11">
+                <div id="subcon11">
+                <div id="box21">
+                    <p style="color: rgb(253, 75, 75);">About Us</p>
+                    <br><br>
+                    <p style="color: rgb(184, 183, 183);">As Travelers and preplanners on a trip, we <br>hate not being able to find parking on a <br>reliable site. We decided to solve this by <br> starting in house!
+
+</p>
+                </div>
+                <div id="box22">
+                    <p style="color: rgb(253, 75, 75);">Company</p>
+                    <br><br>
+                    <p style="color: rgb(184, 183, 183);">
+
+                        Privacy Policy <br>
+                        Cancellation Policy <br>
+                        Terms and Conditions
+                        
+                        
+
+                </div>
+                <div id="box23">
+                    <p style="color: rgb(253, 75, 75);">Contact Info</p>
+                    <br><br>
+                    <p style="color: rgb(184, 183, 183);">
+                        <i class="fa-regular fa-envelope" style="color: rgb(184, 183, 183);"></i>
+                        contact@spotfinder.app <br><br>
+                        <i class="fa-solid fa-phone" style="color: rgb(184, 183, 183);"></i>
+                        833-799-7770 <br><br>
+                        <i class="fa-solid fa-location-dot" style="color: rgb(184, 183, 183);"></i>
+                        Fort Lauderdale, Florida <br><br>
+                        <i class="fa-solid fa-headphones" style="color: rgb(184, 183, 183);"></i>
+                        Contact Support
+
+                        
+                        
+                        
+
+                </div>
+                <div id="box24">
+                    <p style="color: rgb(253, 75, 75);">Payment Accepted</p>
+                    
+                   <img id="img33" src="img/img33.png" alt=""> 
+                   <p style="color:rgb(253, 75, 75);">Social</p>
+                   <i class="fa-brands fa-facebook" style="color: #fa3a3a;"></i>&nbsp;&nbsp;
+                   <i class="fa-brands fa-twitter" style="color: #fa3a3a;"></i>&nbsp;&nbsp;
+                   <i class="fa-brands fa-instagram" style="color: #fa3a3a;"></i>&nbsp;&nbsp;
+                   <i class="fa-brands fa-tiktok" style="color: #fa3a3a;"></i>
+
+                </div>
+            </div>
+            <div id="container12">
+             <p style="text-align: center; color: rgb(97, 97, 97);"> 
+                All rights reserved © 2023 - SpotFinder by Travel Life LLC • Made with ❤️
+            </p>
+            </div>
+
+            </div>
+            
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
